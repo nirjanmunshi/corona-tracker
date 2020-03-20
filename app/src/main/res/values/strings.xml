@@ -2,6 +2,7 @@
     <string name="app_name">COVID-19 Tracker</string>
     <string name="ig_key">B8D3DAB3CD634687AA21649DC1D4B72D</string>
     <string name="total_confirmed_cases">TOTAL CONFIRMED CASES</string>
+    <string name="total_death_cases">Total Death Cases</string>
 
 
 </resources>

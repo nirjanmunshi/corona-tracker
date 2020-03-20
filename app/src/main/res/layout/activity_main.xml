@@ -20,7 +20,9 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Total confirmed cases-->
     <RelativeLayout
+        android:id="@+id/rlTotalConfirmedCases"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/appBarLayout"
@@ -41,9 +43,57 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/heading_total_confirmed_cases"
             style="@style/MainActivityContentText" />
-
-
     </RelativeLayout>
+
+    <!-- Total death-->
+    <RelativeLayout
+        android:id="@+id/rlTotalDeathCases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTotalConfirmedCases"
+        android:paddingStart="@dimen/relative_layout_padding"
+        android:paddingBottom="@dimen/relative_layout_padding">
+
+        <TextView
+            android:id="@+id/heading_total_death_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_death_cases"
+            style="@style/MainActivityHeadingText" />
+
+        <TextView
+            android:id="@+id/total_confirmed_death_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading_total_death_cases"
+            style="@style/MainActivityContentText" />
+    </RelativeLayout>
+
+    <!-- Total recovered-->
+    <RelativeLayout
+        android:id="@+id/rlTotalRecoveredCases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTotalDeathCases"
+        android:paddingStart="@dimen/relative_layout_padding"
+        android:paddingBottom="@dimen/relative_layout_padding">
+
+        <TextView
+            android:id="@+id/heading_total_recovered_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_confirmed_cases"
+            style="@style/MainActivityHeadingText" />
+
+        <TextView
+            android:id="@+id/heading_total_recovered_cases_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading_total_recovered_cases"
+            style="@style/MainActivityContentText" />
+    </RelativeLayout>
+
+
 
 
 </RelativeLayout>

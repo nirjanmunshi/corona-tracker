@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private MainActivityViewModel mainActivityViewModel;
-    private TextView totalConfirmCases;
+    private TextView totalConfirmCases,totalDeathCases,totalRecoveredCases;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialization() {
         totalConfirmCases = findViewById(R.id.total_confirmed_cases_number);
+        totalDeathCases = findViewById(R.id.total_confirmed_death_number);
+        totalRecoveredCases = findViewById(R.id.heading_total_recovered_cases_number);
     }
 
     private void getWorldData() {
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "getWorldData: "+gson.toJson(worldData));
 
             totalConfirmCases.setText(String.valueOf(worldData.getTotalConfirmed()));
+            totalDeathCases.setText(String.valueOf(worldData.getTotalDeaths()));
+            totalRecoveredCases.setText(String.valueOf(worldData.getTotalRecovered()));
         });
     }
 }
