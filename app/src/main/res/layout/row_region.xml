@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+        <TextView
+            android:id="@+id/row_region_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Region Name"
+            style="@style/MainActivityHeadingText" />
+        <TextView
+            android:id="@+id/row_confirmed_cases_number"
+            style="@style/MainActivityContentText.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_region_name"
+            android:textColor="@color/colorTotalConfirmed" />
+
+        <TextView
+            android:id="@+id/row_last_updated"
+            style="@style/MainActivityHeadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_region_name"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorTotalConfirmed" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

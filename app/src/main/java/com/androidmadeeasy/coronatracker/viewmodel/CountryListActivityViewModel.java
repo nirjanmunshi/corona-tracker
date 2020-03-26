@@ -10,11 +10,10 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.androidmadeeasy.coronatracker.model.WorldData;
 import com.androidmadeeasy.coronatracker.repo.CoronaRepo;
 
-public class MainActivityViewModel extends AndroidViewModel {
+public class CountryListActivityViewModel extends AndroidViewModel {
 
     private CoronaRepo repo;
-
-    public MainActivityViewModel(@NonNull Application application) {
+    public CountryListActivityViewModel(@NonNull Application application) {
         super(application);
         repo = new CoronaRepo(application);
     }

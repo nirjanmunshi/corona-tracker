@@ -18,10 +18,32 @@
         <item name="fontFamily">@font/segoe_ui</item>
     </style>
 
+
+    <style name="Widget.CoronaTracker.TextInputLayout.ExposedDropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="hintTextAppearance">@style/TextAppearance.InstantSurvey.TextInputLayout.HintText</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="boxStrokeColor">#fff</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+    <style name="TextAppearance.InstantSurvey.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
     <style name="MainActivityHeadingText" parent="AppTheme.TextFont">
         <item name="textAllCaps">true</item>
         <item name="android:textSize">@dimen/heading_text_size</item>
     </style>
+
+    <style name="MainActivityHeadingText.Large" parent="MainActivityHeadingText">
+        <item name="android:textSize">@dimen/heading_text_size_large</item>
+    </style>
+
+
+    <style name="MainActivityContentText.Large" parent="MainActivityContentText">
+        <item name="android:textSize">@dimen/value_text_size_large</item>
+    </style>
+
 
     <style name="MainActivityContentText" parent="AppTheme.TextFont">
         <item name="textAllCaps">true</item>
