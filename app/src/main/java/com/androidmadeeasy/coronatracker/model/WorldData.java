@@ -38,10 +38,11 @@ public class WorldData {
     public WorldData() {
     }
 
-    public WorldData(int totalConfirmed, int totalDeaths, int totalRecovered, String id, @Nullable String parentId, String displayName, Timestamp lastUpdated) {
+    public WorldData(int totalConfirmed, int totalDeaths, int totalRecovered, List<CountryData> countryData, String id, @Nullable String parentId, String displayName, Timestamp lastUpdated) {
         this.totalConfirmed = totalConfirmed;
         this.totalDeaths = totalDeaths;
         this.totalRecovered = totalRecovered;
+        this.countryData = countryData;
         this.id = id;
         this.parentId = parentId;
         this.displayName = displayName;
@@ -70,6 +71,14 @@ public class WorldData {
 
     public void setTotalRecovered(int totalRecovered) {
         this.totalRecovered = totalRecovered;
+    }
+
+    public List<CountryData> getCountryData() {
+        return countryData;
+    }
+
+    public void setCountryData(List<CountryData> countryData) {
+        this.countryData = countryData;
     }
 
     public String getId() {

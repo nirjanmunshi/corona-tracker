@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.androidmadeeasy.coronatracker.R;
 import com.androidmadeeasy.coronatracker.api.CoronaApi;
@@ -26,13 +27,14 @@ public class CoronaRepo {
     }
 
     // get world data from api
-    public LiveData<WorldData> getWorldData(){
+    public LiveData<WorldData> getWorldData(SwipeRefreshLayout swipeRefreshLayout){
         CoronaApi coronaApi = RetrofitInstance.getApi();
         Call<WorldData> call = coronaApi.getPopularMovies(application.getApplicationContext().getString(R.string.ig_key));
 
         call.enqueue(new Callback<WorldData>() {
             @Override
             public void onResponse(Call<WorldData> call, Response<WorldData> response) {
+                swipeRefreshLayout.setRefreshing(false);
                 if (response.isSuccessful()){
                     worldData = response.body();
                     mutableLiveData.setValue(worldData);
@@ -42,6 +44,7 @@ public class CoronaRepo {
 
             @Override
             public void onFailure(Call<WorldData> call, Throwable t) {
+                swipeRefreshLayout.setRefreshing(false);
                 Toast.makeText(application.getApplicationContext(),"Error in api", Toast.LENGTH_SHORT).show();
             }
         });

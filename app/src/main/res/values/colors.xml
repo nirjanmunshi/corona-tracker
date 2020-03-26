@@ -4,4 +4,11 @@
     <color name="colorPrimary">#EE6667</color>
     <color name="colorAccent">#FFC9CE</color>
     <color name="colorWhite">#F4F4F4</color>
+
+    <color name="colorOffBlack">#222222</color>
+    <color name="colorTotalConfirmed">#004D40</color>
+    <color name="colorTotalDeath">#F44336</color>
+    <color name="colorTotalRecovered">#4CAF50</color>
+    <color name="colorTotalActive">#FFC107</color>
+
 </resources>
